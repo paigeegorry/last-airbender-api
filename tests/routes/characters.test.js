@@ -30,6 +30,7 @@ describe('characters routes', () => {
         });
       });
   });
+
   it('can get a Character by name', () => {
     return request(app)
       .get('/characters/katara')
@@ -92,6 +93,14 @@ describe('characters routes', () => {
       .get('/characters/random')
       .then(res => {
         expect(res.body).toEqual(expect.any(Object));
+      });
+  });
+
+  it('can get 10 random characters', () => {
+    return request(app)
+      .get('/characters/random?count=10')
+      .then(res => {
+        expect(res.body).toHaveLength(10);
       });
   });
 });
