@@ -4,10 +4,17 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "jest --verbose",
-    "test:watch": "npm run test -- --watch",
-    "start": "webpack-dev-server --hot --mode development --devtool eval-source-map",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "jest --verbose --runInBand --detectOpenHandles",
+    "test:watch": "jest --watch --verbose --runInBand --detectOpenHandles",
+    "start": "node server.js",
+    "start:watch": "nodemon server.js",
+    "seed": "node seed.js",
+    "play": "node client/client.js",
+    "drop": "mongo lastAirbender --eval 'db.dropDatabase()'",
+    "db-load-all": "npm run drop && npm run seed"
   },
   "jest": {
     "moduleNameMapper": {
@@ -26,6 +33,7 @@
     "url": "https://github.com/last-airbender-api/issues"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "mongoose": "^5.5.8",
     "node-html-parser": "^1.1.12",
     "normalize.css": "^8.0.1",
@@ -34,7 +42,8 @@
     "react-redux": "^6.0.1",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
-    "superagent": "^4.1.0"
+    "superagent": "^4.1.0",
+    "supertest": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
@@ -61,6 +70,7 @@
     "html-webpack-plugin": "^3.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.3.0",
+    "nodemon": "^1.19.0",
     "postcss-loader": "^3.0.0",
     "postcss-nested": "^4.1.1",
     "prop-types": "^15.7.2",
