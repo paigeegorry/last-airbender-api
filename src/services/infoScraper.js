@@ -3,8 +3,12 @@ const { parse } = require('node-html-parser');
 const fetchCharacterName = require('./nameScraper');
 
 //eslint-disable-next-line
-const fetchInfo = async() => {
-  const characters = await fetchCharacterName();
+module.exports = async() => {
+  let characters = await fetchCharacterName();
+  const charB = await fetchCharacterName('Jingbo');
+  const charC = await fetchCharacterName('Shiro+Shinobi');
+  characters.push(...charB);
+  characters.push(...charC);
   return await Promise.all(characters.map(character => {
     return request.get(`https://avatar.fandom.com/wiki/${character}`)
       .then(res => res.text)
@@ -15,8 +19,7 @@ const fetchInfo = async() => {
         const photoInfo = html.querySelectorAll('.pi-image-thumbnail')[0];
         return [labels, values, character, photoInfo];
       })
-      .then(organizeInfo)
-      .then(console.log);
+      .then(organizeInfo);
   }));
 };
 
@@ -26,12 +29,12 @@ const organizeInfo = async([labels, values, character, photoInfo = '']) => {
     const photo = photoInfo.parentNode.rawAttrs.split('"')[1];    
     obj.photoUrl = photo;
   }
+  if(obj.enemies) {
+    obj.enemies = obj.enemies.split(', ');
+  }
   obj.name = character;
   labels.map((l, i) => {
     return obj[l.split(' ')[0].toLowerCase()] = values[i];
   });
-  obj.enemies = obj.enemies.split(', ');
   return obj;
 };
-
-fetchInfo();
