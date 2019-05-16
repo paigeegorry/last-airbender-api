@@ -56,9 +56,41 @@ describe('characters routes', () => {
 
   it('can get characters from a specific nation', () => {
     return request(app)
-      .get('/characters/?nation=Fire')
+      .get('/characters?nation=Fire')
       .then(res => {
         expect(res.body).toHaveLength(112);
+      });
+  });
+
+  it('can handle spaces in nation query', () => {
+    return request(app)
+      .get('/characters?nation=Fire+Nation')
+      .then(res => {
+        expect(res.body).toHaveLength(98);
+      });
+  });
+
+  it('can handle allies query', () => {
+    return request(app)
+      .get('/characters?allies=Appa')
+      .then(res => {
+        expect(res.body).toHaveLength(3);
+      });
+  });
+
+  it('can handle enemies query', () => {
+    return request(app)
+      .get('/characters?enemies=Zuko')
+      .then(res => {
+        expect(res.body).toHaveLength(10);
+      });
+  });
+
+  it('can get a random character', () => {
+    return request(app)
+      .get('/characters/random')
+      .then(res => {
+        expect(res.body).toEqual(expect.any(Object));
       });
   });
 });
