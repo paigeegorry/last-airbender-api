@@ -2,7 +2,7 @@ const request = require('superagent');
 const { parse } = require('node-html-parser');
 
 /*eslint-disable-next-line*/
-module.exports = (query) => {
+module.exports = (query = '') => {
   return request.get(`https://avatar.fandom.com/wiki/Category:Characters?from=${query}`)
     .then(res => res.text)
     .then(parse)
