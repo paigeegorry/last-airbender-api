@@ -2,9 +2,10 @@ const request = require('superagent');
 const { parse } = require('node-html-parser');
 const fetchCharacterName = require('./nameScraper');
 
-const fetchCharacterInfo = async() => {
+//eslint-disable-next-line
+const fetchInfo = async() => {
   const characters = await fetchCharacterName();
-  characters.map(character => {
+  return await Promise.all(characters.map(character => {
     return request.get(`https://avatar.fandom.com/wiki/${character}`)
       .then(res => res.text)
       .then(parse)
@@ -16,7 +17,7 @@ const fetchCharacterInfo = async() => {
       })
       .then(organizeInfo)
       .then(console.log);
-  });
+  }));
 };
 
 const organizeInfo = async([labels, values, character, photoInfo = '']) => {
@@ -27,9 +28,10 @@ const organizeInfo = async([labels, values, character, photoInfo = '']) => {
   }
   obj.name = character;
   labels.map((l, i) => {
-    return obj[l.toLowerCase()] = values[i];
+    return obj[l.split(' ')[0].toLowerCase()] = values[i];
   });
+  obj.enemies = obj.enemies.split(', ');
   return obj;
 };
 
-fetchCharacterInfo();
+fetchInfo();
