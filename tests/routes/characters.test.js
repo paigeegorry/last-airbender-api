@@ -18,15 +18,9 @@ describe('characters routes', () => {
       .then(res => {
         expect(res.body).toHaveLength(497);
         expect(res.body[0]).toEqual({
-          enemies: [expect.any(String)],
-          first: expect.any(String),
-          gender: expect.any(String),
-          hair: expect.any(String),
           name: expect.any(String),
           photoUrl: expect.any(String),
-          affiliation: expect.any(String),
-          allies: [expect.any(String)],
-          position: expect.any(String)
+          _id: expect.any(String),
         });
       });
   });
@@ -69,6 +63,12 @@ describe('characters routes', () => {
       .get('/characters?nation=Fire+Nation')
       .then(res => {
         expect(res.body).toHaveLength(98);
+        expect(res.body[0]).toEqual({
+          _id: expect.any(String),
+          name: expect.any(String),
+          photoUrl: expect.any(String),
+          affiliation: expect.any(String)
+        });
       });
   });
 
@@ -77,6 +77,13 @@ describe('characters routes', () => {
       .get('/characters?allies=Appa')
       .then(res => {
         expect(res.body).toHaveLength(3);
+        expect(res.body[0]).toEqual({
+          _id: expect.any(String),
+          name: expect.any(String),
+          photoUrl: expect.any(String),
+          allies: ['Appa'],
+          enemies: expect.any(Array)
+        });
       });
   });
 
@@ -85,6 +92,13 @@ describe('characters routes', () => {
       .get('/characters?enemies=Zuko')
       .then(res => {
         expect(res.body).toHaveLength(10);
+        expect(res.body[0]).toEqual({
+          _id: expect.any(String),
+          name: expect.any(String),
+          photoUrl: expect.any(String),
+          allies: expect.any(Array),
+          enemies: ['Zuko']
+        });
       });
   });
 
