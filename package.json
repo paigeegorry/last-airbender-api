@@ -33,6 +33,7 @@
     "url": "https://github.com/last-airbender-api/issues"
   },
   "dependencies": {
+    "dotenv-webpack": "^1.7.0",
     "express": "^4.16.4",
     "mongoose": "^5.5.8",
     "node-html-parser": "^1.1.12",
