@@ -2,9 +2,8 @@
   "name": "last-airbender-api",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "server.js",
   "scripts": {
-    "build": "webpack -p",
     "lint": "eslint .",
     "pretest": "npm run lint",
     "test": "jest --verbose --runInBand --detectOpenHandles",
