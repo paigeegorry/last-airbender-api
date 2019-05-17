@@ -40,7 +40,6 @@
   },
   "devDependencies": {
     "eslint": "^5.14.0",
-    "file-loader": "^3.0.1",
     "jest": "^24.3.0",
     "nodemon": "^1.19.0"
   },
