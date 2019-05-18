@@ -4,40 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
   <title>Last Airbender API</title>
 </head>
 <body>
-  <h1>Last Airbender API</h1>
-  <h2>Available Routes/Queries</h2>
-  <ul>
-    <li>
-      <p>GET /api/v1/characters</p>
-      <p>get all characters</p>
-    </li>
-    <li>
-      <p>GET /api/vi/characters/${Character+Name}</p>
-      <p>get a specific character by name</p>
-    </li>
-    <li>
-      <p>GET /api/v1/characters/random</p>
-      <p>get one random character</p>
-    </li>
-    <li>
-      <p>GET /api/v1/characters/random?count=${Num}</p>
-      <p>get a number of random characters</p>
-    </li>
-    <li>
-      <p>GET /api/v1/characters?nation=${Nation+Name}</p>
-      <p>get characters with a specific affiliation (i.e. Fire+Nation, Water+Tribe, etc.)</p>
-    </li>
-    <li>
-      <p>GET /api/v1/characters?enemies=${Character+Name}</p>
-      <p>get characters that are enemies of a specific character</p>
-    </li>
-    <li>
-      <p>GET /api/v1/characters?allies=${Character+Name}</p>
-      <p>get characters who are allies of a specific character</p>
-    </li>
-  </ul>
+  <header>
+    <h1>Last Airbender API</h1>
+    <img src="./assets/20140123142703-Symbols.png" alt="elements symbols" />
+  </header>
+  <main>
+    <table>
+        <tr>
+          <th>Routes + Queries</th>
+          <th>What they do</th> 
+        </tr>
+        <tr>
+          <td class="route"><span>GET /api/v1/characters</span></td>
+          <td>get all characters</td> 
+        </tr>
+        <tr>
+          <td class="route"><span>GET /api/vi/characters/${Character+Name}</span></td>
+          <td>get a specific character by name</td> 
+        </tr>
+        <tr>
+          <td class="route"><span>GET /api/v1/characters?nation=${Nation+Name}</span></td>
+          <td>get characters with a specific affiliation <br>(i.e. Fire+Nation, Water+Tribe, etc.)</td>
+        </tr>
+        <tr>
+          <td class="route"><span>GET /api/v1/characters?enemies=${Character+Name}</span></td>
+          <td>get characters that are enemies <br /> of a specific character</td>
+        </tr>
+        <tr>
+          <td class="route"><span>GET /api/v1/characters?allies=${Character+Name}</span></td>
+          <td>get characters who are allies <br /> of a specific character</td>
+        </tr>
+        <tr>
+          <td class="route"><span>GET /api/v1/characters/random</span></td>
+          <td>get one random character</td>
+        </tr>
+        <tr>
+          <td class="route"><span>GET /api/v1/characters/random?count=${Num}</span></td>
+          <td>get a number of random characters</td>
+        </tr>
+      </table>
+  </main>
+  <footer>
+    <nav>
+      <a href="https://github.com/paigeegorry/last-airbender-api" alt="Github">Github</a>
+      <a href="https://twitter.com/paigeegorry" alt="twitter">Twitter</a> 
+      <a href="https://www.linkedin.com/in/paigeegorry/" alt="LinkedIn">LinkedIn</a>
+    </nav>
+    <p>© Paige E. Gorry</p>
+  </footer>
 </body>
 </html>
