@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Last Airbender API</title>
+</head>
+<body>
+  <h1>Last Airbender API</h1>
+  <h2>Available Routes/Queries</h2>
+  <ul>
+    <li>
+      <p>GET /api/v1/characters</p>
+      <p>get all characters</p>
+    </li>
+    <li>
+      <p>GET /api/vi/characters/${Character+Name}</p>
+      <p>get a specific character by name</p>
+    </li>
+    <li>
+      <p>GET /api/v1/characters/random</p>
+      <p>get one random character</p>
+    </li>
+    <li>
+      <p>GET /api/v1/characters/random?count=${Num}</p>
+      <p>get a number of random characters</p>
+    </li>
+    <li>
+      <p>GET /api/v1/characters?nation=${Nation+Name}</p>
+      <p>get characters with a specific affiliation (i.e. Fire+Nation, Water+Tribe, etc.)</p>
+    </li>
+    <li>
+      <p>GET /api/v1/characters?enemies=${Character+Name}</p>
+      <p>get characters that are enemies of a specific character</p>
+    </li>
+    <li>
+      <p>GET /api/v1/characters?allies=${Character+Name}</p>
+      <p>get characters who are allies of a specific character</p>
+    </li>
+  </ul>
+</body>
+</html>
