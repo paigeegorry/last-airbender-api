@@ -46,4 +46,4 @@ I welcome any and all contributions! Feel free to submit a Pull Request with you
 Standard [MIT](/LICENSE.md)
 
 ## Acknowledgements
-Thank you to [Kate Dameron](https://github.com/Katedam) for their help with talking me through structuring this mess of data!
+Thank you to [Kate Dameron](https://github.com/Katedam) for helping me structure all of this monstrous data (497 characters!!!!!).
