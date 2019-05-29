@@ -46,10 +46,9 @@ td {
 footer {
   width: 200px;
   margin: 0 auto;
-  margin-top: 0;
+  margin-top: 20px;
   font-size: 1.75em;
   text-align: center;
-  margin-top: 50px;
   border-top: 1px solid lightgray;
   padding-top: 10px;
 }
@@ -62,7 +61,7 @@ p {
   padding: 0;
 }
 a {
-  margin-top: 5px;
+  margin-top: 0px;
   text-decoration: none;
   color: black;
   background: rgba(29, 156, 16, 0.3);
