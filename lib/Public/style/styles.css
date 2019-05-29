@@ -46,6 +46,7 @@ td {
 footer {
   width: 200px;
   margin: 0 auto;
+  margin-top: 0;
   font-size: 1.75em;
   text-align: center;
   margin-top: 50px;
