@@ -25,8 +25,6 @@ _All routes are GET routes_
 * **GET /api/v1/characters/random?count=${Num}** - get a number of random characters
 * **GET /api/v1/characters/avatar** - get all avatars
 
-
-
 ## Getting Started
 I welcome any and all contributions! Feel free to submit a Pull Request with your changes to make this a better API for everyone!
 
@@ -49,4 +47,4 @@ I welcome any and all contributions! Feel free to submit a Pull Request with you
 Standard [MIT](/LICENSE.md)
 
 ## Acknowledgements
-Thank you to [Kate Dameron](https://github.com/Katedam) for helping me structure all of this monstrous data (497 characters!!!!!).
+Thank you to [Kate Dameron](https://github.com/Katedam) for inspiring me to create my own API!
