@@ -16,13 +16,15 @@ Node.js, [MongoDB](https://www.mongodb.com/what-is-mongodb), [Express](https://w
 _All routes are GET routes_
 * **GET /api/v1/characters** - get all characters
 * **GET /api/v1/characters/${CharacterId}** - get character by id
-* **GET /api/v1/characters?nation=${Nation+Name}** - get characters with a specific affiliation
+* **GET /api/v1/characters?affiliation=${Nation+Name}** - get characters with a specific affiliation
 (i.e. Fire+Nation, Water+Tribe, etc.)
 * **GET /api/v1/characters?enemies=${Character+Name}** - get characters that are enemies of a specific character
 * **GET /api/v1/characters?allies=${Character+Name}** - get characters who are allies of a specific character
 * **GET /api/v1/characters?name=${Character+Name}** - get characters who's name matches a string
 * **GET /api/v1/characters/random** - get one random character
 * **GET /api/v1/characters/random?count=${Num}** - get a number of random characters
+* **GET /api/v1/characters/avatar** - get all avatars
+
 
 
 ## Getting Started
