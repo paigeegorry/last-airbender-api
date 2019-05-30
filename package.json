@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "jest --verbose --runInBand --detectOpenHandles",
+    "test": "jest --verbose --runInBand --detectOpenHandles && exit 0",
     "test:watch": "jest --watch --verbose --runInBand --detectOpenHandles",
     "start": "node server.js",
     "start:watch": "nodemon server.js",

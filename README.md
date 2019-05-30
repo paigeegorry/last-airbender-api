@@ -7,10 +7,10 @@
 ## Overview
 This is an open-source API that provides character information from Avatar: The Last Airbender. This information is publicly sourced; I do not claim to own.
 
-![LastAirbender](https://res.cloudinary.com/dkrup6iyl/image/upload/v1558546077/Screen_Shot_2019-05-22_at_10.27.23_AM.png)
+![LastAirbender](https://res.cloudinary.com/dkrup6iyl/image/upload/v1559248105/Screen_Shot_2019-05-30_at_1.26.32_PM.png)
 
 ## Technologies used
-Node.js, [MongoDB](https://www.mongodb.com/what-is-mongodb), [Express](https://www.npmjs.com/package/express), [Jest](https://www.npmjs.com/package/jest), [SuperTest](https://www.npmjs.com/package/supertest), [nodemon](https://www.npmjs.com/package/nodemon), [dotenv](https://www.npmjs.com/package/dotenv), [Mongoose](https://www.npmjs.com/package/mongoose), [morgan](https://www.npmjs.com/package/morgan), [SuperAgent](https://www.npmjs.com/package/superagent), [node-html-parser](https://www.npmjs.com/package/node-html-parser)
+Node.js, [MongoDB](https://www.mongodb.com/what-is-mongodb), [Express](https://www.npmjs.com/package/express), [Jest](https://www.npmjs.com/package/jest), [SuperTest](https://www.npmjs.com/package/supertest), [nodemon](https://www.npmjs.com/package/nodemon), [dotenv](https://www.npmjs.com/package/dotenv), [Mongoose](https://www.npmjs.com/package/mongoose), [morgan](https://www.npmjs.com/package/morgan), [SuperAgent](https://www.npmjs.com/package/superagent), [node-html-parser](https://www.npmjs.com/package/node-html-parser), [express-ga-middleware]('https://www.npmjs.com/package/express-ga-middleware')
 
 ## Routes
 _All routes are GET routes_
