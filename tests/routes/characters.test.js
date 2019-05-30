@@ -32,15 +32,18 @@ describe('characters routes', () => {
     return request(app)
       .get('/api/v1/characters?name=Katara')
       .then(res => {
-        expect(res.body[0]).toEqual({ 
-          _id: expect.any(String),
-          enemies: ['Ozai'],
-          photoUrl:
-         'https://vignette.wikia.nocookie.net/avatar/images/7/7a/Katara_smiles_at_coronation.png/revision/latest?cb=20150104171449',
-          name: 'Katara',
-          allies: ['Southern Water Tribe', 'Aang', ''],
-          affiliation: ' Team Avatar Water Tribe',
-        });
+        expect(res.body[0]).toEqual({
+          'allies': [
+            'Team Avatar'
+          ],
+          'enemies': [
+            'Fire Nation'
+          ],
+          '_id': expect.any(String),
+          'photoUrl': 'https://vignette.wikia.nocookie.net/avatar/images/3/34/Katara_games.png/revision/latest?cb=20140615101117',
+          'name': 'Katara (games)',
+          'affiliation': 'Team Avatar'
+        },);
       });
   });
 
@@ -116,35 +119,22 @@ describe('characters routes', () => {
       });
   });
 
-  it.only('can get a character by its id', () => {
+  it('can get a character by its id', () => {
     return request(app)
-      .get('/api/v1/characters/5cdf0769b6e02a467e3e7735')
+      .get('/api/v1/characters/5cddc833ae7a54279fdb8a1f')
       .then(res => {
-        expect(res.body).toEqual(
-          {
-            'allies': [
-              'Southern Water Tribe',
-              'Aang',
-              ''
-            ],
-            'enemies': [
-              'Ozai'
-            ],
-            '_id': '5cdf0769b6e02a467e3e7735',
-            'photoUrl': 'https://vignette.wikia.nocookie.net/avatar/images/7/7a/Katara_smiles_at_coronation.png/revision/latest?cb=20150104171449',
-            'name': 'Katara',
-            'gender': 'Female',
-            'eye': 'Blue',
-            'hair': 'Dark brown ',
-            'skin': 'Brown',
-            'love': ' Aang (husband; widowed) Jet (formerly)[8]',
-            'weapon': 'Water',
-            'profession': ' Healer Waterbending instructor',
-            'position': ' Daughter of Southern Water Tribe chief Master healer Waterbending master',
-            'affiliation': ' Team Avatar Water Tribe',
-            'first': '"'
-          }
-        );
+        expect(res.body).toEqual({ 
+          '_id': '5cddc833ae7a54279fdb8a1f', 
+          'affiliation': ' Earth Kingdom Earth Kingdom Royal Family', 
+          'allies': ['Royal Earthbender Guards'], 
+          'enemies': ['Chin'], 
+          'first': 'Escape from the Spirit World', 
+          'gender': 'Male', 
+          'hair': 'White', 
+          'name': '46th Earth King', 
+          'photoUrl': 'https://vignette.wikia.nocookie.net/avatar/images/5/51/46th_Earth_King.png/revision/latest?cb=20130627160441', 
+          'position': 'Earth King' 
+        });
       });
   });
 });
