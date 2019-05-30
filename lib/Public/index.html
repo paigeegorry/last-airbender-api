@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
   <link rel="shortcut icon" type="image/png" href="./style/favicon.png">
   <title>Last Airbender API</title>
 </head>
+
 <body>
   <header>
     <h1>Last Airbender API</h1>
@@ -17,51 +19,52 @@
   </header>
   <main>
     <table>
-        <tr>
-          <th>Routes + Queries</th>
-          <th>What they do</th> 
-        </tr>
-        <tr>
-          <td class="route"><span>GET /api/v1/characters</span></td>
-          <td>get all characters</td> 
-        </tr>
-        <tr>
-          <td class="route"><span>GET /api/v1/characters/avatar</span></td>
-          <td>get all the avatars</td> 
-        </tr>
-        <tr>
-          <td class="route"><span>GET /api/v1/characters/${Character+Name}</span></td>
-          <td>get a specific character by name</td> 
-        </tr>
-        <tr>
-          <td class="route"><span>GET /api/v1/characters?nation=${Nation+Name}</span></td>
-          <td>get characters with a specific affiliation <br>(i.e. Fire+Nation, Water+Tribe, etc.)</td>
-        </tr>
-        <tr>
-          <td class="route"><span>GET /api/v1/characters?enemies=${Character+Name}</span></td>
-          <td>get characters that are enemies <br /> of a specific character</td>
-        </tr>
-        <tr>
-          <td class="route"><span>GET /api/v1/characters?allies=${Character+Name}</span></td>
-          <td>get characters who are allies <br /> of a specific character</td>
-        </tr>
-        <tr>
-          <td class="route"><span>GET /api/v1/characters/random</span></td>
-          <td>get one random character</td>
-        </tr>
-        <tr>
-          <td class="route"><span>GET /api/v1/characters/random?count=${Num}</span></td>
-          <td>get a number of random characters</td>
-        </tr>
-      </table>
+      <tr>
+        <th>Routes + Queries</th>
+        <th>What they do</th>
+      </tr>
+      <tr>
+        <td class="route"><span>GET /api/v1/characters</span></td>
+        <td>get all characters</td>
+      </tr>
+      <tr>
+        <td class="route"><span>GET /api/v1/characters/${CharacterId}</span></td>
+        <td>get a specific character by id</td>
+      </tr>
+      <tr>
+        <td class="route"><span>GET /api/v1/characters?nation=${Nation+Name}</span></td>
+        <td>get characters with a specific affiliation <br>(i.e. Fire+Nation, Water+Tribe, etc.)</td>
+      </tr>
+      <tr>
+        <td class="route"><span>GET /api/v1/characters?enemies=${Character+Name}</span></td>
+        <td>get characters that are enemies <br /> of a specific character</td>
+      </tr>
+      <tr>
+        <td class="route"><span>GET /api/v1/characters?allies=${Character+Name}</span></td>
+        <td>get characters who are allies <br /> of a specific character</td>
+      </tr>
+      <tr>
+        <td class="route"><span>GET /api/v1/characters?name=${Character+Name}</span></td>
+        <td>get characters who's name matches <br /> a string</td>
+      </tr>
+      <tr>
+        <td class="route"><span>GET /api/v1/characters/random</span></td>
+        <td>get one random character</td>
+      </tr>
+      <tr>
+        <td class="route"><span>GET /api/v1/characters/random?count=${Num}</span></td>
+        <td>get a number of random characters</td>
+      </tr>
+    </table>
   </main>
   <footer>
     <nav>
       <a href="https://github.com/paigeegorry/last-airbender-api" alt="Github">Github</a>
-      <a href="https://twitter.com/paigeegorry" alt="twitter">Twitter</a> 
+      <a href="https://twitter.com/paigeegorry" alt="twitter">Twitter</a>
       <a href="https://www.linkedin.com/in/paigeegorry/" alt="LinkedIn">LinkedIn</a>
     </nav>
     <p>© Paige E. Gorry</p>
   </footer>
 </body>
+
 </html>
