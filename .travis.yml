@@ -4,3 +4,8 @@ services: mongodb
 env: MONGODB_URI=mongodb://127.0.0.1:27017/lastAirbender
 deploy:
   provider: heroku
+  api_key:
+    secure: KEY
+  app: last-airbender-api
+  on:
+    repo: paigeegorry/last-airbender-api
