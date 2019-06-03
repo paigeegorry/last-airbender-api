@@ -5,7 +5,7 @@ env: MONGODB_URI=mongodb://127.0.0.1:27017/lastAirbender
 deploy:
   provider: heroku
   api_key:
-    secure: KEY
+    secure: RDyJyRgZrxLQ1yHhsWBfOz8bMM620a+Pz6NvT16CfhxE8WPuPlPOwgbptldl2zu3I0xcNuvY/7hHIl8ywy8cX4p/XFIQUtCtmY3sPXF1FA3uVJFtO4vLvEB73yCkEZzGGlwVWqnWd4QDJvUCImLhLOi3oAQqgv3iP6Lrczc9EOvhyM9bSLgKELMZIN+uMBdtXxaStssaX6OAkH7LdUJhp2JU9nihsBbiu/1JzN0gLxv2nftpSo9obL5U1Q8IuXgyv0VjZBeCMtuhRUv9gH5h1v1JmYhMD3eGxnKfs2y/iGLYxmD+RW2QD3M32mv1IiJ6CzysfRfsC1QH1icB+lLqIjeogMlv85A+bCA5k5KTlMAd1qusgJ9k2IMq7GaCIJockchcXtAxLPjbuuxOjVbxKf6SneTJHyhLPNFOJbKuQInkpDU6NMddI9Sx7/kdJ7mmdBNFhky+f+W6k02ml8fBmCiyKCHNhK+9cgm+iKSBYMxzSLMqTaZwebYOA2iUqkTZD+kQJv5VesAfvJ+wKX/MeReGI5uiThKuutuoREadBoTA+iYpyHELGNQLwDl5NArybajbYExIy+J/HNz+z5df2rvhpXikAidLJLb6E2N1WN9f4hNNiSgZGsLQAaSa2y/u+HwvVUKXpHCI3ace5/NlZCKCqx3sQOrvo8QKjl9rMqo=
   app: last-airbender-api
   on:
     repo: paigeegorry/last-airbender-api
