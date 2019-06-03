@@ -2,21 +2,24 @@ require('dotenv').config();
 const request = require('supertest');
 const app = require('../../lib/app');
 const mongoose = require('mongoose');
+const seedData = require('../seedData');
 
 describe('characters routes', () => {
   beforeAll(() => {
-    return mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+    return mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
+      .then(() => seedData());
   });
 
   afterAll(() => {
-    return mongoose.connection.close();
+    return mongoose.connection.dropDatabase()
+      .then(() => mongoose.connection.close());
   });
 
   it('can get all characters', () => {
     return request(app)
       .get('/api/v1/characters')
       .then(res => {
-        expect(res.body).toHaveLength(497);
+        expect(res.body).toHaveLength(5);
         expect(res.body[0]).toEqual({
           name: expect.any(String),
           photoUrl: expect.any(String),
@@ -30,20 +33,20 @@ describe('characters routes', () => {
 
   it('can get a Character by name', () => {
     return request(app)
-      .get('/api/v1/characters?name=Katara')
+      .get('/api/v1/characters?name=Aang')
       .then(res => {
         expect(res.body[0]).toEqual({
           'allies': [
-            'Team Avatar'
+            'Appa'
           ],
           'enemies': [
-            'Fire Nation'
+            'Azula'
           ],
-          '_id': expect.any(String),
-          'photoUrl': 'https://vignette.wikia.nocookie.net/avatar/images/3/34/Katara_games.png/revision/latest?cb=20140615101117',
-          'name': 'Katara (games)',
-          'affiliation': 'Team Avatar'
-        },);
+          '_id': '5cf5679a915ecad153ab68c9',
+          'photoUrl': 'https://vignette.wikia.nocookie.net/avatar/images/a/ae/Aang_at_Jasmine_Dragon.png/revision/latest?cb=20130612174003',
+          'name': 'Aang',
+          'affiliation': ' Air Acolytes Air Nomads Air Scouts (formerly) Team Avatar'
+        });
       });
   });
 
@@ -51,7 +54,15 @@ describe('characters routes', () => {
     return request(app)
       .get('/api/v1/characters?affiliation=Fire')
       .then(res => {
-        expect(res.body).toHaveLength(112);
+        expect(res.body).toHaveLength(1);
+        expect(res.body[0]).toEqual({
+          _id: expect.any(String),
+          affiliation: 'Fire Nation',
+          allies: expect.any(Array),
+          enemies: expect.any(Array),
+          name: expect.any(String),
+          photoUrl: expect.any(String)
+        });
       });
   });
 
@@ -59,15 +70,14 @@ describe('characters routes', () => {
     return request(app)
       .get('/api/v1/characters?affiliation=Fire+Nation')
       .then(res => {
-        expect(res.body).toHaveLength(98);
-        expect(res.body[0]).toEqual({
-          _id: expect.any(String),
-          name: expect.any(String),
-          photoUrl: expect.any(String),
-          affiliation: expect.any(String),
-          allies: expect.any(Array),
-          enemies: expect.any(Array)
-        });
+        expect(res.body).toHaveLength(1);
+        expect(res.body[0]).toEqual({ 
+          '_id': '5cf5679a915ecad153ab68cc', 
+          'affiliation': 'Fire Nation', 
+          'allies': ['Fire Nation'], 
+          'enemies': ['Aang'], 
+          'name': 'Afiko', 
+          'photoUrl': 'https://vignette.wikia.nocookie.net/avatar/images/2/24/Afiko.png/revision/latest?cb=20121121024128' });
       });
   });
 
@@ -75,7 +85,7 @@ describe('characters routes', () => {
     return request(app)
       .get('/api/v1/characters?allies=Appa')
       .then(res => {
-        expect(res.body).toHaveLength(3);
+        expect(res.body).toHaveLength(1);
         expect(res.body[0]).toEqual({
           _id: expect.any(String),
           name: expect.any(String),
@@ -89,16 +99,16 @@ describe('characters routes', () => {
 
   it('can handle enemies query', () => {
     return request(app)
-      .get('/api/v1/characters?enemies=Zuko')
+      .get('/api/v1/characters?enemies=Azula')
       .then(res => {
-        expect(res.body).toHaveLength(10);
+        expect(res.body).toHaveLength(1);
         expect(res.body[0]).toEqual({
           _id: expect.any(String),
           name: expect.any(String),
           photoUrl: expect.any(String),
           allies: expect.any(Array),
           affiliation: expect.any(String),
-          enemies: ['Zuko']
+          enemies: ['Azula']
         });
       });
   });
@@ -113,27 +123,23 @@ describe('characters routes', () => {
 
   it('can get 10 random characters', () => {
     return request(app)
-      .get('/api/v1/characters/random?count=10')
+      .get('/api/v1/characters/random?count=2')
       .then(res => {
-        expect(res.body).toHaveLength(10);
+        expect(res.body).toHaveLength(2);
       });
   });
 
   it('can get a character by its id', () => {
     return request(app)
-      .get('/api/v1/characters/5cddc833ae7a54279fdb8a1f')
+      .get('/api/v1/characters/5cf5679a915ecad153ab68c8')
       .then(res => {
         expect(res.body).toEqual({ 
-          '_id': '5cddc833ae7a54279fdb8a1f', 
+          '_id': '5cf5679a915ecad153ab68c8', 
           'affiliation': ' Earth Kingdom Earth Kingdom Royal Family', 
           'allies': ['Royal Earthbender Guards'], 
           'enemies': ['Chin'], 
-          'first': 'Escape from the Spirit World', 
-          'gender': 'Male', 
-          'hair': 'White', 
           'name': '46th Earth King', 
-          'photoUrl': 'https://vignette.wikia.nocookie.net/avatar/images/5/51/46th_Earth_King.png/revision/latest?cb=20130627160441', 
-          'position': 'Earth King' 
+          'photoUrl': 'https://vignette.wikia.nocookie.net/avatar/images/5/51/46th_Earth_King.png/revision/latest?cb=20130627160441'
         });
       });
   });
