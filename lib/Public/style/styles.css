@@ -70,4 +70,7 @@ a {
 a:hover {
   background: inherit;
 }
-
+h6 {
+  margin: 0;
+  font-size: 0.75em;
+}

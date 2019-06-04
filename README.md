@@ -14,7 +14,8 @@ Node.js, [MongoDB](https://www.mongodb.com/what-is-mongodb), [Express](https://w
 
 ## Routes
 _All routes are GET routes_
-* **GET /api/v1/characters** - get all characters
+* **GET /api/v1/characters** - get all characters (default 20 per page / 497 total characters)
+* **GET /api/v1/characters?perPage=${Num}?page=${Num}** - pagination now available!
 * **GET /api/v1/characters/${CharacterId}** - get character by id
 * **GET /api/v1/characters?affiliation=${Nation+Name}** - get characters with a specific affiliation
 (i.e. Fire+Nation, Water+Tribe, etc.)
