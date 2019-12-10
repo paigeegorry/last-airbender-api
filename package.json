@@ -35,7 +35,7 @@
     "dotenv": "^8.0.0",
     "express": "^4.16.4",
     "express-ga-middleware": "^0.1.6",
-    "mongoose": "^5.5.8",
+    "mongoose": "^5.7.5",
     "node-html-parser": "^1.1.12",
     "postcss": "^7.0.16",
     "superagent": "^4.1.0",
