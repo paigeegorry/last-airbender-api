@@ -5,9 +5,12 @@
 **[last-airbender-api.herokuapp.com](https://last-airbender-api.herokuapp.com)**
 
 ## Overview
-This is an open-source API that provides character information from Avatar: The Last Airbender. This information is publicly sourced; I do not claim to own.
+This is an open-source API that provides character information from Avatar: The Last Airbender. This information is publicly sourced; I do not claim to own. 
 
-![LastAirbender](https://res.cloudinary.com/dkrup6iyl/image/upload/v1559248105/Screen_Shot_2019-05-30_at_1.26.32_PM.png)
+I welcome any and all contributions! Feel free to submit a Pull Request with your changes to make this a better API for everyone!
+
+## Motivation
+While a 
 
 ## Technologies used
 Node.js, [MongoDB](https://www.mongodb.com/what-is-mongodb), [Express](https://www.npmjs.com/package/express), [Jest](https://www.npmjs.com/package/jest), [SuperTest](https://www.npmjs.com/package/supertest), [nodemon](https://www.npmjs.com/package/nodemon), [dotenv](https://www.npmjs.com/package/dotenv), [Mongoose](https://www.npmjs.com/package/mongoose), [morgan](https://www.npmjs.com/package/morgan), [SuperAgent](https://www.npmjs.com/package/superagent), [node-html-parser](https://www.npmjs.com/package/node-html-parser), [express-ga-middleware]('https://www.npmjs.com/package/express-ga-middleware')
@@ -27,8 +30,6 @@ _All routes are GET routes_
 * **GET /api/v1/characters/avatar** - get all avatars
 
 ## Getting Started
-I welcome any and all contributions! Feel free to submit a Pull Request with your changes to make this a better API for everyone!
-
 1. Clone and download [GitHub repo](https://github.com/paigeegorry/last-airbender-api)
 1. Install dependencies:\
 `npm i`
