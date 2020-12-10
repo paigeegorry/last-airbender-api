@@ -8,14 +8,13 @@
   <link rel="stylesheet" href="./style/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" type="image/png" href="./style/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="./assets/appa.png">
   <title>Last Airbender API</title>
 </head>
 
-<body>
+<body style=margin:0>
   <header>
     <h1>Last Airbender API</h1>
-    <img src="./assets/20140123142703-Symbols.png" alt="elements symbols" />
   </header>
   <main>
     <table>
@@ -32,6 +31,18 @@
         <td>get a specific character by id</td>
       </tr>
       <tr>
+        <td class="route"><span>GET /api/v1/characters/random</span></td>
+        <td>get one random character</td>
+      </tr>
+      <tr>
+        <td class="route"><span>GET /api/v1/characters/random?count=${Num}</span></td>
+        <td>get a number of random characters</td>
+      </tr>
+      <tr>
+        <td class="route"><span>GET /api/v1/characters/avatar</span></td>
+        <td>get all avatars</td>
+      </tr>
+      <tr>
         <td class="route"><span>GET /api/v1/characters?affiliation=${Nation+Name}</span></td>
         <td>get characters with a specific affiliation <br>(i.e. Fire+Nation, Water+Tribe, etc.)</td>
       </tr>
@@ -46,18 +57,6 @@
       <tr>
         <td class="route"><span>GET /api/v1/characters?name=${Character+Name}</span></td>
         <td>get characters who's name matches <br /> a string</td>
-      </tr>
-      <tr>
-        <td class="route"><span>GET /api/v1/characters/random</span></td>
-        <td>get one random character</td>
-      </tr>
-      <tr>
-        <td class="route"><span>GET /api/v1/characters/random?count=${Num}</span></td>
-        <td>get a number of random characters</td>
-      </tr>
-      <tr>
-        <td class="route"><span>GET /api/v1/characters/avatar</span></td>
-        <td>get all avatars</td>
       </tr>
     </table>
   </main>
