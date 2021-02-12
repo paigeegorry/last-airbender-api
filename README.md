@@ -20,7 +20,7 @@ _All routes are GET routes_
 * **GET /api/v1/characters/CHARACTER_ID** - get character by id
   * example: [GET /api/v1/characters/5cf5679a915ecad153ab68cc](https://last-airbender-api.herokuapp.com/api/v1/characters/5cf5679a915ecad153ab68cc)
 * **GET /api/v1/characters?affiliation=NATION_NAME** - get characters with a specific affiliation
-  * choices: "Fire Nation", "Water Tribe", "Earth Kingdom", "Air Nomads", "Team Avatar", "Air Acolytes", and more!
+  * choices: "Fire Nation", "Water Tribe", "Earth Kingdom", "Air Nomads", "Team Avatar", and more!
   * example: [GET /api/v1/characters?affiliation=Fire+Nation](https://last-airbender-api.herokuapp.com/api/v1/characters?affiliation=Fire+Nation)
 * **GET /api/v1/characters?enemies=CHARACTER_NAME** - get characters that are enemies of a specific character
   * example: [GET /api/v1/characters?enemies=Aang](https://last-airbender-api.herokuapp.com/api/v1/characters?enemies=Aang)
@@ -34,6 +34,11 @@ _All routes are GET routes_
   * example: [GET /api/v1/characters/random?count=5](https://last-airbender-api.herokuapp.com/api/v1/characters/random?count=5)
 * **GET /api/v1/characters/avatar** - get all avatars
   * example: [GET /api/v1/characters/avatar](https://last-airbender-api.herokuapp.com/api/v1/characters/avatar)
+
+## Error Conditions
+
+Any error in query parameter values will likely respond with an empty array `[]` as a response. Double-check the parameters and ask for help if you think something isn't working properly.
+
 
 ## Getting Started
 I welcome any and all contributions! Feel free to submit a Pull Request with your changes to make this a better API for everyone!
