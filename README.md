@@ -16,6 +16,7 @@ Node.js, [MongoDB](https://www.mongodb.com/what-is-mongodb), [Express](https://w
 _All routes are GET routes_
 * **GET /api/v1/characters** - get all characters (default 20 per page / 497 total characters)
 * **GET /api/v1/characters?perPage=NUMBER&page=NUMBER** - pagination now available!
+  * pagination is also available on other endpoints below
   * example: [GET /api/v1/characters?perPage=10&page=5](https://last-airbender-api.herokuapp.com/api/v1/characters?perPage=10&page=5)
 * **GET /api/v1/characters/CHARACTER_ID** - get character by id
   * example: [GET /api/v1/characters/5cf5679a915ecad153ab68cc](https://last-airbender-api.herokuapp.com/api/v1/characters/5cf5679a915ecad153ab68cc)
