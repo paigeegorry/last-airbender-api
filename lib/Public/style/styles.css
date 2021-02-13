@@ -1,6 +1,6 @@
 
 body {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Shadows Into Light Two', cursive;
 }
 h1 {
   font-family: 'Amatic SC', cursive;
@@ -28,7 +28,7 @@ table {
   margin-top: 20px;
   font-family: 'Amatic SC', cursive;
   font-size: 1.5em;
-  width: 75vw;
+  width: 90vw;
 }
 th {
   text-transform: uppercase;
@@ -42,9 +42,10 @@ tr {
   padding: 10px;
 }
 td {
-  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 1.5em;
   padding: 5px;
-  margin: 5px;
+  margin: 8px;
+  text-align: right;
 }
 footer {
   width: 50%;
@@ -76,4 +77,13 @@ a:hover {
 h6 {
   margin: 0;
   font-size: 0.75em;
+}
+.example-link {
+  font-size: 1.25rem;
+  position: absolute; top: 0; right: 0; text-align:right;
+  padding: 5px;
+}
+.route {
+  position: relative;
+  text-align: left;
 }
