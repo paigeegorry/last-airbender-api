@@ -2,13 +2,15 @@
 
 **Authors**: [Paige Gorry](https://github.com/paigeegorry)
 
-**[last-airbender-api.herokuapp.com](https://last-airbender-api.herokuapp.com)**
+<s>last-airbender-api.herokuapp.com</s>**[last-airbender-api.fly.dev](https://last-airbender-api.fly.dev/)**
+
+**DEPRECATION:** As of 1/15/23, the herokuapp url is deprecated. Please use the updated fly.io url.
 
 ## Overview
 This is an open-source API that provides character information from Avatar: The Last Airbender. This information is publicly sourced; I do not claim to own.
 
 ## Technologies used
-Node.js, [MongoDB](https://www.mongodb.com/what-is-mongodb), [Express](https://www.npmjs.com/package/express), [Jest](https://www.npmjs.com/package/jest), [SuperTest](https://www.npmjs.com/package/supertest), [nodemon](https://www.npmjs.com/package/nodemon), [dotenv](https://www.npmjs.com/package/dotenv), [Mongoose](https://www.npmjs.com/package/mongoose), [morgan](https://www.npmjs.com/package/morgan), [SuperAgent](https://www.npmjs.com/package/superagent), [node-html-parser](https://www.npmjs.com/package/node-html-parser), [express-ga-middleware]('https://www.npmjs.com/package/express-ga-middleware')
+Node.js, [MongoDB](https://www.mongodb.com/what-is-mongodb), [Express](https://www.npmjs.com/package/express), [Mongoose](https://www.npmjs.com/package/mongoose), [node-html-parser](https://www.npmjs.com/package/node-html-parser)
 
 ## Routes
 _All routes are GET routes_
