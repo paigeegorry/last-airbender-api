@@ -17,24 +17,24 @@ _All routes are GET routes_
 * **`GET /api/v1/characters`** - get all characters (default 20 per page / 497 total characters)
 * **`GET /api/v1/characters?perPage=<number>&page=<number>`** - pagination now available!
   * pagination is also available on other endpoints below
-  * example: [GET /api/v1/characters?perPage=10&page=5](https://last-airbender-api.herokuapp.com/api/v1/characters?perPage=10&page=5)
+  * example: [GET /api/v1/characters?perPage=10&page=5](https://last-airbender-api.fly.dev/api/v1/characters?perPage=10&page=5)
 * **`GET /api/v1/characters/<character_id>`** - get character by id
-  * example: [GET /api/v1/characters/5cf5679a915ecad153ab68cc](https://last-airbender-api.herokuapp.com/api/v1/characters/5cf5679a915ecad153ab68cc)
+  * example: [GET /api/v1/characters/5cf5679a915ecad153ab68cc](https://last-airbender-api.fly.dev/api/v1/characters/5cf5679a915ecad153ab68cc)
 * **`GET /api/v1/characters?affiliation=<nation+name>`** - get characters with a specific affiliation
   * choices: "Fire Nation", "Water Tribe", "Earth Kingdom", "Air Nomads", "Team Avatar", and more!
-  * example: [GET /api/v1/characters?affiliation=Fire+Nation](https://last-airbender-api.herokuapp.com/api/v1/characters?affiliation=Fire+Nation)
+  * example: [GET /api/v1/characters?affiliation=Fire+Nation](https://last-airbender-api.fly.dev/api/v1/characters?affiliation=Fire+Nation)
 * **`GET /api/v1/characters?enemies=<character+name>`** - get characters that are enemies of a specific character
-  * example: [GET /api/v1/characters?enemies=Aang](https://last-airbender-api.herokuapp.com/api/v1/characters?enemies=Aang)
+  * example: [GET /api/v1/characters?enemies=Aang](https://last-airbender-api.fly.dev/api/v1/characters?enemies=Aang)
 * **`GET /api/v1/characters?allies=<character+name>`** - get characters who are allies of a specific character
-  * example: [GET /api/v1/characters?allies=Aang](https://last-airbender-api.herokuapp.com/api/v1/characters?allies=Aang)
+  * example: [GET /api/v1/characters?allies=Aang](https://last-airbender-api.fly.dev/api/v1/characters?allies=Aang)
 * **`GET /api/v1/characters?name=<character+name>`** - get characters whose name matches a string
-  * example: [GET /api/v1/characters?name=Aang](https://last-airbender-api.herokuapp.com/api/v1/characters?name=Aang)
+  * example: [GET /api/v1/characters?name=Aang](https://last-airbender-api.fly.dev/api/v1/characters?name=Aang)
 * **`GET /api/v1/characters/random`** - get one random character
-  * example: [GET /api/v1/characters/random](https://last-airbender-api.herokuapp.com/api/v1/characters/random)
+  * example: [GET /api/v1/characters/random](https://last-airbender-api.fly.dev/api/v1/characters/random)
 * **`GET /api/v1/characters/random?count=<number>`** - get a number of random characters
-  * example: [GET /api/v1/characters/random?count=5](https://last-airbender-api.herokuapp.com/api/v1/characters/random?count=5)
+  * example: [GET /api/v1/characters/random?count=5](https://last-airbender-api.fly.dev/api/v1/characters/random?count=5)
 * **`GET /api/v1/characters/avatar`** - get all avatars
-  * example: [GET /api/v1/characters/avatar](https://last-airbender-api.herokuapp.com/api/v1/characters/avatar)
+  * example: [GET /api/v1/characters/avatar](https://last-airbender-api.fly.dev/api/v1/characters/avatar)
 
 ## Error Conditions
 
